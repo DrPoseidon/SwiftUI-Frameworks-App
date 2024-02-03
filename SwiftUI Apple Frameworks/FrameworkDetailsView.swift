@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct FrameworkDetailsView: View {
-
     @Environment(\.dismiss) var dismiss
-    @Binding var framework: Framework
+    @Environment(\.openURL) var openURL
+    var framework: Framework
     
     var body: some View {
         VStack {
@@ -21,8 +21,8 @@ struct FrameworkDetailsView: View {
                     dismiss()
                 } label: {
                     Image(systemName: "xmark")
-                        .padding()
-                        .foregroundStyle(.white)
+                        .foregroundStyle(Color(.label)) // label - будет белый в темном режиме и черным в светлом
+                        .frame(width: 44, height: 44)
                 }
             }
             
@@ -31,18 +31,15 @@ struct FrameworkDetailsView: View {
             FrameworkView(framework: framework)
             
             Text("\(framework.description)")
+                .font(.body)
                 .padding()
             
             Spacer()
             
-            Button {
-                print(framework.urlString)
-            } label: {
-                ButtonView(label: "Learn More",
-                           textColor: .white,
-                           backgroundColor: .red) {
-                    print(framework.urlString)
-                }
+            ButtonView(label: "Learn More",
+                       textColor: .white,
+                       backgroundColor: .red) {
+                openURL(URL(string: framework.urlString)!)
             }
             .preferredColorScheme(.dark)
         }
@@ -51,13 +48,8 @@ struct FrameworkDetailsView: View {
 
 #Preview {
     struct Preview: View {
-        @State var framework = Framework(name: "SwiftUI",
-                                         imageName: "swiftui",
-                                         urlString: "https://developer.apple.com/xcode/swiftui",
-                                         description: "SwiftUI is an innovative, exceptionally simple way to build user interfaces across all Apple platforms with the power of Swift. Build user interfaces for any Apple device using just one set of tools and APIs.\n\nWith a declarative Swift syntax that’s easy to read and natural to write, SwiftUI works seamlessly with new Xcode design tools to keep your code and design perfectly in sync. Automatic support for Dynamic Type, Dark Mode, localization, and accessibility means your first line of SwiftUI code is already the most powerful UI code you’ve ever written.")
-        
         var body: some View {
-            FrameworkDetailsView(framework: $framework)
+            FrameworkDetailsView(framework: MockData.frameworks[0])
         }
     }
 

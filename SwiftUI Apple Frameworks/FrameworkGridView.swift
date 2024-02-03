@@ -18,6 +18,7 @@ struct FrameworkGridView: View {
                                              imageName: "",
                                              urlString: "",
                                              description: "")
+    @StateObject var frameworkState = FrameworkState()
     
     var body: some View {
         NavigationView {
@@ -26,15 +27,16 @@ struct FrameworkGridView: View {
                     ForEach(MockData.frameworks, id: \.id) { framework in
                         FrameworkView(framework: framework)
                             .onTapGesture {
-                                selectedFramework = framework
-                                isShowDetails.toggle()
+                                frameworkState.selectedFramework = framework
                             }
                     }
                 }
             }
             .navigationTitle("🍎 Frameworks")
-            .sheet(isPresented: $isShowDetails) {
-                FrameworkDetailsView(framework: $selectedFramework)
+            .sheet(isPresented: $frameworkState.isShowDetails) {
+                let framework = frameworkState.selectedFramework ?? Framework(name: "", imageName: "", urlString: "", description: "")
+                
+                FrameworkDetailsView(framework: framework)
             }
         }
         .preferredColorScheme(.dark)

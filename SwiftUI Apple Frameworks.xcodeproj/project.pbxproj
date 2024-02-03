@@ -12,6 +12,7 @@
 		731C79412B5597C100EE7F1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 731C79402B5597C100EE7F1B /* Preview Assets.xcassets */; };
 		731C79482B5599A400EE7F1B /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C79472B5599A400EE7F1B /* Framework.swift */; };
 		731C794A2B559A8800EE7F1B /* FrameworkGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C79492B559A8800EE7F1B /* FrameworkGridView.swift */; };
+		731E37022B6E4A2A0031D112 /* FrameworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E37012B6E4A2A0031D112 /* FrameworkState.swift */; };
 		73C3767A2B6228E000EAC04C /* FrameworkDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C376792B6228E000EAC04C /* FrameworkDetailsView.swift */; };
 		73C3767C2B622DDD00EAC04C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C3767B2B622DDD00EAC04C /* ButtonView.swift */; };
 		73D0C1242B5BC18C0056C1D7 /* FrameworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D0C1232B5BC18C0056C1D7 /* FrameworkView.swift */; };
@@ -24,6 +25,7 @@
 		731C79402B5597C100EE7F1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		731C79472B5599A400EE7F1B /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
 		731C79492B559A8800EE7F1B /* FrameworkGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridView.swift; sourceTree = "<group>"; };
+		731E37012B6E4A2A0031D112 /* FrameworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkState.swift; sourceTree = "<group>"; };
 		73C376792B6228E000EAC04C /* FrameworkDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailsView.swift; sourceTree = "<group>"; };
 		73C3767B2B622DDD00EAC04C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		73D0C1232B5BC18C0056C1D7 /* FrameworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		731C792D2B5597BF00EE7F1B = {
 			isa = PBXGroup;
 			children = (
+				731E37012B6E4A2A0031D112 /* FrameworkState.swift */,
 				731C79382B5597BF00EE7F1B /* SwiftUI Apple Frameworks */,
 				731C79372B5597BF00EE7F1B /* Products */,
 			);
@@ -154,6 +157,7 @@
 				73C3767C2B622DDD00EAC04C /* ButtonView.swift in Sources */,
 				731C79482B5599A400EE7F1B /* Framework.swift in Sources */,
 				731C793A2B5597BF00EE7F1B /* SwiftUI_Apple_FrameworksApp.swift in Sources */,
+				731E37022B6E4A2A0031D112 /* FrameworkState.swift in Sources */,
 				73D0C1242B5BC18C0056C1D7 /* FrameworkView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

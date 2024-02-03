@@ -18,17 +18,20 @@ struct ButtonView: View {
             action();
         } label: {
             Text(label)
+                .font(.title2)
+                .fontWeight(.semibold)
                 .frame(width: 280, height: 50)
                 .background(backgroundColor)
                 .foregroundColor(textColor)
-                .font(.system(size: 20, weight: .bold))
                 .cornerRadius(10)
         }
     }
 }
 
 #Preview {
-    ButtonView(label: "My Button", textColor: .white, backgroundColor: .blue) {
+    ButtonView(label: "My Button",
+               textColor: .white,
+               backgroundColor: .blue) {
         print("clicked")
     }
 }
