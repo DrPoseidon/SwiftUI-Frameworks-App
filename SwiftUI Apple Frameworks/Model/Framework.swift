@@ -15,6 +15,11 @@ struct Framework: Identifiable {
     let description: String
 }
 
+enum ListType {
+    case grid
+    case list
+}
+
 struct MockData {
     static let frameworks = [
         Framework(name: "App Clips",
